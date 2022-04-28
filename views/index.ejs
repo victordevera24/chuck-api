@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="/joke" method="GET">
+      <button type="submit">Get Chuck Norris Joke</button>
+    </form>
+    <% if (jokeData) { %>
+          <h2><%= jokeData.value %></h2>
+    <% } else { %>
+      <h3 class="text-center text-info">Click button to get joke</h3>
+    <% } %>
+  </body>
+</html>
